@@ -37,3 +37,24 @@ function demoHoistingSentence() {
 
 // Test cases (uncomment to run after implementation)
  demoHoistingSentence();
+
+// Problem - 3
+
+ // Topic: var ordering
+// Concept: Hoisted declaration then assignment.
+// Problem: Log before and after assignment.
+// Hints: Inside one function log both.
+// Examples:
+// Input: demoVarOrder()
+// Output: undefined then value
+
+
+function demoVarOrder() {
+  // TODO: implement
+  console.log(val)
+  var val = 20;
+  console.log(val)
+}
+
+// Test cases (uncomment to run after implementation)
+// demoVarOrder();
