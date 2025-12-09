@@ -58,3 +58,30 @@ function demoVarOrder() {
 
 // Test cases (uncomment to run after implementation)
 // demoVarOrder();
+
+// Problem - 4
+
+// Topic: let block scope / TDZ
+// Concept: `let` is block-scoped; TDZ forbids access before init.
+// Problem: Shadow a variable in a block.
+// Hints: Declare outer and inner `let`.
+// Examples:
+// Input: demoLetBlock()
+// Output: outer 1, inner 2
+
+function demoLetBlock() {
+
+  let x = 1;           // outer variable
+  console.log("outer", x);
+
+  {
+    // TDZ: accessing x here BEFORE this line would throw ReferenceError
+    let x = 2;         // inner block-scoped variable (shadows outer)
+    console.log("inner", x);
+  }
+
+  // Outer x is still 1 (inner shadow does not affect outer)
+}
+
+// Test cases (uncomment to run after implementation)
+demoLetBlock();
