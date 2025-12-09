@@ -85,3 +85,23 @@ function demoLetBlock() {
 
 // Test cases (uncomment to run after implementation)
 demoLetBlock();
+
+// Problem - 5
+function demoConst() {
+  const msg = "hello";
+
+  // ❌ Attempt to reassign (will throw Error)
+  try {
+    msg = "hi";  // TypeError: Assignment to constant variable
+  } catch (err) {
+    console.log("TypeError on reassign");
+  }
+
+  // ✅ Object mutation allowed
+  const obj = { val: 1 };
+  obj.val = 2;
+  console.log("property mutated:", obj.val);
+}
+
+// Test case
+demoConst();
